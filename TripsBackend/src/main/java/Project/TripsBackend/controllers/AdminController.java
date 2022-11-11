@@ -2,6 +2,7 @@ package Project.TripsBackend.controllers;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import Project.TripsBackend.entities.Admin;
@@ -39,7 +40,7 @@ public class AdminController {
 
 	@PutMapping("/UpdateTrip/{id}")
 	public void UpdateTrip(@RequestBody Trip trip, @PathVariable("id") Long id) {
-		 tripServices.updateTrip(trip, id);
+		tripServices.updateTrip(trip, id);
 
 	}
 
@@ -76,8 +77,8 @@ public class AdminController {
 	}
 
 	@PostMapping("/Login")
-	public void login(@RequestBody Admin admin) {
-		adminServices.login(admin);
+	public ResponseEntity<Admin> login(@RequestBody Admin admin) {
+		return adminServices.login(admin);
 	}
 
 	@PutMapping("/UpdateAdmin/{id}")
@@ -87,7 +88,6 @@ public class AdminController {
 
 	@GetMapping("/GetAdmins")
 	public List<Admin> GetAdmins() {
-
 		return adminServices.getAdmins();
 	}
 

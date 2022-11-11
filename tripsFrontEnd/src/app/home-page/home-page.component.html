@@ -1,1 +1,50 @@
-<p>home-page works!</p>
+<body>
+<div id="viewport" >
+	<!-- Sidebar -->
+	<div id="sidebar">
+	  <header>
+		<a href="#">Actions</a>
+	  </header>
+	  <ul class="nav">
+		<li>
+		  <a (click)="addStation()">
+			<i class="zmdi zmdi-view-dashboard"></i> Add station
+		  </a>
+		</li>
+		<li>
+		  <a (click)="addTrip()">
+			<i class="zmdi zmdi-link"></i> Add trip
+		  </a>
+		</li>
+		<li>
+		  <a (click)="goToAdminList()">
+			<i class="zmdi zmdi-widgets"></i> Go to admin list
+		  </a>
+		</li>
+		<li>
+		  <a (click)="goToTripList()">
+			<i class="zmdi zmdi-calendar"></i> Go to trip list
+		  </a>
+		</li>
+		<li>
+		  <a (click)="goToStationList()">
+			<i class="zmdi zmdi-info-outline"></i> Go to station list
+		  </a>
+		</li>
+	  </ul>
+	</div>
+	<!-- Content -->
+	<div id="content">
+	  <nav class="navbar navbar-default">
+		<div class="container-fluid">
+		</div>
+	  </nav>
+	  <div class="container-fluid">
+		<h1 style="text-align: center;">Home Page</h1>
+		<p style="text-align: center;">
+			Welcome to the home page.
+		</p>
+	  </div>
+	</div>
+  </div>
+</body>

@@ -1,0 +1,30 @@
+<body>
+	<div class="login-form">
+	  <section>
+		<h1>Update Trip</h1>
+		<div class="content">
+
+		<div class="input-field">
+			<input type="text" [(ngModel)]="trip.from_station" from_station = "from_station" placeholder="From station" autocomplete="nope">
+		</div>
+		<div class="input-field">
+			<input type="text" [(ngModel)]="trip.to_station" to_station = "to_station" placeholder="To station" autocomplete="nope">
+		</div>
+		<div class="input-field">
+			<input type="date" [(ngModel)]="trip.start_time" start_time = "start_time" placeholder="Start time" autocomplete="nope">
+		</div>
+		<div class="input-field">
+			<input type="date" [(ngModel)]="trip.end_time" end_time = "end_time" placeholder="End time" autocomplete="nope">
+		</div>
+
+
+
+		</div>
+		<div class="action">
+		  <button (click)="onSubmit()">Update trip</button>
+		</div>
+	  </section>
+	</div>
+	
+	</body>
+	

@@ -21,11 +21,11 @@ export class SignupComponent implements OnInit {
     this.adminService.signupAdmin(this.admin).subscribe(data => {
       console.log(data)
     })
-    this.goToAdminList();
+    this.goToHomePage();
   }
 
-  goToAdminList(){
-    this.router.navigate(['/adminList'])
+  goToHomePage(){
+    this.router.navigate(['/home-page'])
   }
 
   onSubmit(){
