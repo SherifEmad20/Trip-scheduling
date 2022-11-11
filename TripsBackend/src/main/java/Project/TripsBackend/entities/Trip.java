@@ -15,6 +15,13 @@ public class Trip {
 	private LocalDate start_time;
 	private LocalDate end_time;
 
+	
+	/*
+	 * @Temporal(TemporalType.TIMESTAMP)
+	 * LocalDateTime
+	 * 
+	 * */
+	
 	public Trip() {
 	}
 
