@@ -10,6 +10,9 @@ import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { UpdateAdminComponent } from './update-admin/update-admin.component';
+import { StationListComponent } from './station-list/station-list.component';
+import { AddStationComponent } from './add-station/add-station.component';
+import { UpdateStationComponent } from './update-station/update-station.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { UpdateAdminComponent } from './update-admin/update-admin.component';
     HomePageComponent,
     AdminListComponent,
     UpdateAdminComponent,
+    StationListComponent,
+    AddStationComponent,
+    UpdateStationComponent,
   ],
   imports: [
     BrowserModule,

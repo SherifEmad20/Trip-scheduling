@@ -12,7 +12,6 @@ export class SignupComponent implements OnInit {
 
   admin:Admin = new Admin();
 
-
   constructor(private adminService: AdminService, private router:Router) { }
 
   ngOnInit(): void {
@@ -32,9 +31,4 @@ export class SignupComponent implements OnInit {
   onSubmit(){
     this.signupAdmin();
   }
-
-
-
-
-
 }
