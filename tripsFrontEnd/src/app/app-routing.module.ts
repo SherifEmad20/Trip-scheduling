@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddStationComponent } from './add-station/add-station.component';
+import { AddTripComponent } from './add-trip/add-trip.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { StationListComponent } from './station-list/station-list.component';
+import { TripListComponent } from './trip-list/trip-list.component';
 import { UpdateAdminComponent } from './update-admin/update-admin.component';
 import { UpdateStationComponent } from './update-station/update-station.component';
+import { UpdateTripComponent } from './update-trip/update-trip.component';
 
 const routes: Routes = [
 
@@ -21,6 +24,11 @@ const routes: Routes = [
   {path:'addStation', component:AddStationComponent},
   {path:'stationList', component:StationListComponent},
   {path:'update-station/:id', component:UpdateStationComponent},
+
+  {path:'addTrip', component:AddTripComponent},
+  {path:'tripList', component:TripListComponent},
+  {path:'update-trip/:id', component:UpdateTripComponent},
+
 
 ];
 

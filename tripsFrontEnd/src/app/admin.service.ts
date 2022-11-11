@@ -17,7 +17,13 @@ export class AdminService {
   signupAdmin(admin: Admin): Observable<Object>{
     return this.http.post<Admin>('http://localhost:8080/api/v1/student/Signup', admin);
   }
+
+  LoginAdmin(admin: Admin): Observable<Object>{
+    return this.http.post<Admin>('http://localhost:8080/api/v1/student/Login', admin);
+  }
   
+
+
   updateAdmin(id:number, admin:Admin):Observable<Object>{
     return this.http.put(`http://localhost:8080/api/v1/student/UpdateAdmin/${id}`, admin)
   }

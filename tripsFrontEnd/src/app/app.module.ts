@@ -13,6 +13,9 @@ import { UpdateAdminComponent } from './update-admin/update-admin.component';
 import { StationListComponent } from './station-list/station-list.component';
 import { AddStationComponent } from './add-station/add-station.component';
 import { UpdateStationComponent } from './update-station/update-station.component';
+import { AddTripComponent } from './add-trip/add-trip.component';
+import { UpdateTripComponent } from './update-trip/update-trip.component';
+import { TripListComponent } from './trip-list/trip-list.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { UpdateStationComponent } from './update-station/update-station.componen
     StationListComponent,
     AddStationComponent,
     UpdateStationComponent,
+    AddTripComponent,
+    UpdateTripComponent,
+    TripListComponent,
   ],
   imports: [
     BrowserModule,

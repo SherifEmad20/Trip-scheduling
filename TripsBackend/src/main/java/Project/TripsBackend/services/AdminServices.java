@@ -3,6 +3,7 @@ package Project.TripsBackend.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import Project.TripsBackend.entities.Admin;
@@ -21,24 +22,29 @@ public class AdminServices {
 		adminRepo.save(admin);
 	}
 
-	public void login(Admin admin) {
+	public ResponseEntity<Admin> login(Admin admin) {
+
+		boolean flag = false;
 
 		for (int i = 0; i < adminRepo.findAll().size(); i++) {
 			if (adminRepo.findAll().get(i).getEmail().equals(admin.getEmail())
 					&& adminRepo.findAll().get(i).getPassword().equals(admin.getPassword())) {
-				System.out.println("Login sucessfully");
+				flag = true;
 			}
 		}
 
+		if (flag == true) {
+			return ResponseEntity.ok(admin);
+
+		} else
+			return (ResponseEntity<Admin>) ResponseEntity.internalServerError();
 	}
 
 	public List<Admin> getAdmins() {
-
 		return adminRepo.findAll();
 	}
-	
-	public void deleteAdmin(Long id) {
 
+	public void deleteAdmin(Long id) {
 		adminRepo.deleteById(id);
 	}
 
