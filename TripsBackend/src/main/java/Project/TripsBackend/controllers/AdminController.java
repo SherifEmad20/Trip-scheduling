@@ -14,7 +14,7 @@ import Project.TripsBackend.services.TripServices;
 
 @RestController
 @RequestMapping(path = "api/v1/student")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 public class AdminController {
 	private final TripServices tripServices;
 	private final StationServices stationServices;
