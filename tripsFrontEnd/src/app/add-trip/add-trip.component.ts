@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Station } from '../station';
+import { StationService } from '../station.service';
 import { Trip } from '../trip';
 import { TripService } from '../trip.service';
 
@@ -11,8 +13,9 @@ import { TripService } from '../trip.service';
 export class AddTripComponent implements OnInit {
 
   trip:Trip = new Trip()
+  stations!:Station[]
 
-  constructor(private tripService:TripService, private router:Router) { }
+  constructor(private tripService:TripService, private router:Router, private stationService: StationService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +30,16 @@ export class AddTripComponent implements OnInit {
   goToTripList(){
     this.router.navigate(['/tripList'])
   }
+
+  private getStationList(){
+    this.stationService.getStationList().subscribe(data => {
+      this.stations = data;
+    })
+  }
+
+
+
+
 
   onSubmit(){
     this.addNewTrip();

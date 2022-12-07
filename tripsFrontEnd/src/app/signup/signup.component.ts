@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
   }
 
   goToHomePage(){
-    this.router.navigate(['/home-page'])
+    this.router.navigate(['/login'])
   }
 
   onSubmit(){
