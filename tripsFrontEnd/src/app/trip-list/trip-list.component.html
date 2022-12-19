@@ -1,0 +1,27 @@
+<h2>Trips list</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Trip id</th>
+            <th>From station</th>
+            <th>To station</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let trip of trips" >
+            <td> {{trip.id}} </td>
+            <td> {{trip.from_station}} </td>
+            <td> {{trip.to_station}} </td>
+            <td> {{trip.start_time}} </td>
+            <td> {{trip.end_time}} </td>
+            <td>
+                <button (click)="updateTrip(trip.id)" class = "btn btn-info">Update</button>
+                <button (click)="deleteTrip(trip.id)" class = "btn btn-danger" style="margin-left: 15px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

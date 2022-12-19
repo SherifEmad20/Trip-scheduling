@@ -1,0 +1,21 @@
+<h2>Stations list</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Station id</th>
+            <th>Station name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let station of stations" >
+            <td> {{station.id}} </td>
+            <td> {{station.stationName}} </td>
+            <td>
+                <button (click)="updateStation(station.id)" class = "btn btn-info">Update</button>
+                <button (click)="deleteStation(station.id)" class = "btn btn-danger" style="margin-left: 15px;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

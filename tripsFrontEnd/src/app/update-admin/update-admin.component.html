@@ -1,0 +1,21 @@
+<body>
+	<div class="login-form">
+	  <section>
+		<h1>Update Admin</h1>
+		<div class="content">
+
+		<div class="input-field">
+			<input type="text" [(ngModel)]="admin.name" name = "name" placeholder="Username" autocomplete="nope">
+		</div>
+		<div class="input-field">
+			<input type="password" [(ngModel)]="admin.password" password = "password" placeholder="Password" autocomplete="new-password">
+		  </div>
+		</div>
+		<div class="action">
+		  <button (click)="onSubmit()">Update Admin</button>
+		</div>
+	  </section>
+	</div>
+	
+	</body>
+	
